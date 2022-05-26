@@ -45,7 +45,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Upload
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: Event File
         path: ${{ github.event_path }}
@@ -139,7 +139,7 @@ jobs:
           cat pr.json
 
       - name: Upload PR meta
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: github.event_name == 'pull_request'
         with:
           name: PR Meta
@@ -2182,7 +2182,7 @@ jobs:
         shell: bash
 
       - name: Upload Test Results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: always() && contains(matrix.image, '-cpu-')
         with:
           name: Unit Test Results - ${{ matrix.image }}
@@ -4060,7 +4060,7 @@ jobs:
         shell: bash
 
       - name: Upload Test Results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: always() && contains(matrix.image, '-cpu-')
         with:
           name: Unit Test Results - ${{ matrix.image }}
@@ -4194,7 +4194,7 @@ jobs:
 
 
       - name: Upload Test Results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: always() && contains(matrix.image, '-cpu-')
         with:
           name: Unit Test Results - ${{ matrix.image }}
@@ -4355,7 +4355,7 @@ jobs:
           ls test_*.py | gtimeout 10m xargs -n 1 horovodrun -np 2 /bin/bash ../../pytest.sh macos
 
       - name: Upload Test Results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: always()
         with:
           name: Unit Test Results - ${{ matrix.image }}-macos
@@ -4397,7 +4397,7 @@ jobs:
           output_path: artifacts/Unit Test Results - GPU NON HEADS on Builtkite
 
       - name: Upload Test Results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: always()
         with:
           name: Unit Test Results - GPU NON HEADS on Builtkite
@@ -4446,7 +4446,7 @@ jobs:
           output_path: artifacts/Unit Test Results - GPU HEADS on Builtkite
 
       - name: Upload Test Results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: always()
         with:
           name: Unit Test Results - GPU HEADS on Builtkite
