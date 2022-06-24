@@ -116,6 +116,7 @@ To install Horovod on Linux or macOS:
     <p/>
 
 2. If you've installed TensorFlow from `PyPI <https://pypi.org/project/tensorflow>`__, make sure that ``g++-5`` or above is installed.
+   Starting with TensorFlow 2.10 a C++17-compliant compiler like ``g++8`` or above will be required.
 
    If you've installed PyTorch from `PyPI <https://pypi.org/project/torch>`__, make sure that ``g++-5`` or above is installed.
 
@@ -288,7 +289,7 @@ See `Run Horovod <running.rst>`_ for more details, including RoCE/InfiniBand twe
 
 4. To run in Docker, see `Horovod in Docker <docker.rst>`_.
 
-5. To run on Kubernetes, see `Kubeflow MPI Operator <https://github.com/kubeflow/mpi-operator/>`_, `Helm Chart <https://github.com/kubernetes/charts/tree/master/stable/horovod/>`_, `FfDL <https://github.com/IBM/FfDL/tree/master/etc/examples/horovod/>`_, and `Polyaxon <https://docs.polyaxon.com/integrations/horovod/>`_.
+5. To run on Kubernetes, see `Helm Chart <https://github.com/horovod/horovod/tree/master/docker/helm/>`_, `Kubeflow MPI Operator <https://github.com/kubeflow/mpi-operator/>`_, `FfDL <https://github.com/IBM/FfDL/tree/master/etc/examples/horovod/>`_, and `Polyaxon <https://docs.polyaxon.com/integrations/horovod/>`_.
 
 6. To run on Spark, see `Horovod on Spark <spark.rst>`_.
 
